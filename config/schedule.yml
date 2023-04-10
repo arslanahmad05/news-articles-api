@@ -1,0 +1,10 @@
+:queues:
+  - default
+:schedule:
+  imran_khan:
+    cron: "0 17 */2 * *"
+    class: ImportNewsImranKhan
+
+  us_headline:
+    cron: "0 */3 * * *"
+    class: ImportHeadlineNewsUs
