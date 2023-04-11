@@ -5,6 +5,8 @@ class Ability
 
   def initialize(user)
     can :read, Article, public: true
+    can :read, Author, public: true
+    can :read, Topic, public: true
     return unless user.admin  # additional permissions for administrators
     can :manage, :all
   end

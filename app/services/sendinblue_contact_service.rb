@@ -6,7 +6,6 @@ class SendinblueContactService
   end
 
   def call
-    debugger
     api_instance = SibApiV3Sdk::ContactsApi.new
     create_contact = SibApiV3Sdk::CreateContact.new
     create_contact = {
@@ -16,9 +15,9 @@ class SendinblueContactService
 
     begin
       result = api_instance.create_contact(create_contact)
-      p result
+      return result
     rescue SibApiV3Sdk::ApiError => e
-      puts "Exception when calling ContactsApi->create_contact: #{e}"
+      return "Exception when calling ContactsApi->create_contact: #{e}"
     end
   end
 

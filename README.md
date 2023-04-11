@@ -1,24 +1,54 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
 
-Things you may want to cover:
+### Clone the repository
 
-* Ruby version
+```shell
+git clone git@github.com:arslanahmad05/news-articles-api.git # ssh
+git clone https://github.com/arslanahmad05/news-articles-api.git # https
+cd news-articles-api
+```
 
-* System dependencies
+### Check your Ruby version
 
-* Configuration
+```shell
+ruby -v
+```
 
-* Database creation
+The ouput should start with something like `ruby 3.0.0`
 
-* Database initialization
+If not, install the right ruby version using [rvm](https://rvm.io/) (it could take a while):
 
-* How to run the test suite
+```shell
+rvm install 3.0.0
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Install dependencies
 
-* Deployment instructions
+Using [Bundler](https://github.com/bundler/bundler) :
 
-* ...
+```shell
+bundle install
+```
+
+### Set environment variables
+
+Using [dotenv](https://github.com/bkeepers/dotenv):
+
+See [.env.sample](https://github.com/arslanahmad05/news-articles-api/blob/master/.env.sample) and contact the developer: [arslanahmad0075@gmail.com](mailto:arslanahmad0075@gmail.com) (sensitive data).
+
+### Initialize the database
+
+```shell
+rails db:create db:migrate db:seed
+```
+
+## Serve
+
+```shell
+rails s
+```
+
+## API Documentation
+
+See [swagger.yaml](https://github.com/arslanahmad05/news-articles-api/blob/master/swagger/v1/swagger.yaml) for API Documentation
